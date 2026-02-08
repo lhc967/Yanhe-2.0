@@ -1,0 +1,26 @@
+/* 图片懒加载过渡动画 */
+.img-lazy-loading {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #f0f2f5; /* 没加载出来时显示浅灰色背景 */
+  min-height: 150px; /* 给一个最小高度，防止高度塌陷 */
+}
+
+.img-lazy-loaded {
+  opacity: 1;
+}
+
+/* 移动端响应式布局优化 */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
